@@ -1,20 +1,19 @@
 import gradio as gr
 from fastai.vision.all import load_learner, PILImage
-import torch
-  
+
 learn = load_learner('model.pkl')
 
 def classify_image(image):
-    pred, pred_idx, probs = learn.predict(image)
+    pred, _, probs = learn.predict(image)
     return {learn.dls.vocab[i]: float(probs[i]) for i in range(len(probs))}
 
 interface = gr.Interface(
     fn=classify_image,
-    inputs=gr.inputs.Image(type='pil'),
-    outputs=gr.outputs.Label(num_top_classes=3),
+    inputs=gr.Image(type='pil'),  # Updated to new API
+    outputs=gr.Label(num_top_classes=3),  # Updated to new API
     title="Potato Plant Disease Classifier",
-    description="Potato leaf: "
+    description="Potato leaf:"
 )
 
 if __name__ == "__main__":
-    interface.launch()
+    interface.launch(share=True)
