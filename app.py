@@ -2,12 +2,10 @@
 import gradio as gr
 from fastai.vision.all import load_learner, PILImage
 import torch
-
-model_path = 'potato_classifier.pkl'  # Ensure this path is correct
-learn = load_learner(model_path)
+  
+learn = load_learner(model.pkl)
 
 def classify_image(image):
-    # Predict the class of the image
     pred, pred_idx, probs = learn.predict(image)
     return {learn.dls.vocab[i]: float(probs[i]) for i in range(len(probs))}
 
