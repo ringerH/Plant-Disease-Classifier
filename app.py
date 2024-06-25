@@ -1,9 +1,8 @@
-
 import gradio as gr
 from fastai.vision.all import load_learner, PILImage
 import torch
   
-learn = load_learner(model.pkl)
+learn = load_learner('model.pkl')
 
 def classify_image(image):
     pred, pred_idx, probs = learn.predict(image)
