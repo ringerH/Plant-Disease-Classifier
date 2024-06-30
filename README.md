@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ---
 title: Potatoes
 emoji: 👁
@@ -11,3 +12,7 @@ license: apache-2.0
 ---
 
 Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+=======
+# Plant-Disease-Classifier
+A disease classifier for potato plants which utilizes pre-trained CNN-resnet18 architecture and finetuned over image dataset .
+>>>>>>> github/main
