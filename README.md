@@ -33,8 +33,8 @@ To run this project locally, follow these steps:
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/USERNAME/REPOSITORY_NAME.git
-    cd REPOSITORY_NAME
+    git clone https://github.com/ringerH/Potato-Disease-Classifier.git
+    cd Potato-Disease-Classifier
     ```
 
 2. **Create a Virtual Environment:**
